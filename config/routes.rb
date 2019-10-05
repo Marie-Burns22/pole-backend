@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :bookings
+  devise_for :users
   resources :time_slots
   resources :courses
   resources :packs
