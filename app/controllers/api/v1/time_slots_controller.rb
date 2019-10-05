@@ -1,4 +1,4 @@
-class TimeSlotsController < ApplicationController
+class TimeSlotsController < ApiController
   before_action :set_time_slot, only: [:show, :update, :destroy]
 
   # GET /time_slots
