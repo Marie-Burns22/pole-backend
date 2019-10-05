@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :users
   ActiveAdmin.routes(self)
   
   namespace :api do
     namespace :v1 do
       resources :time_slots
-      resources :users
       resources :bookings
       resources :courses
       resources :packs  
