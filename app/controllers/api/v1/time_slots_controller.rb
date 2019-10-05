@@ -1,5 +1,5 @@
 class TimeSlotsController < ApiController
-  before_action :set_time_slot, only: [:show, :update, :destroy]
+  # before_action :set_time_slot, only: [:show, :update, :destroy]
 
   # GET /time_slots
   def index
@@ -46,6 +46,6 @@ class TimeSlotsController < ApiController
 
     # Only allow a trusted parameter "white list" through.
     def time_slot_params
-      params.require(:time_slot).permit(:date, :time, :day)
+      params.require(:time_slot).permit(:date, :time, :day, :course_id)
     end
 end

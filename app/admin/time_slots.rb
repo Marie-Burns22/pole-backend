@@ -1,5 +1,5 @@
 ActiveAdmin.register TimeSlot do
-  permit_params :date, :time, :day
+  permit_params :date, :time, :day, :course_id
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
