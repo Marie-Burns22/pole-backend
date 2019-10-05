@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :time_slots
   resources :courses
   resources :packs
   devise_for :admin_users, ActiveAdmin::Devise.config
