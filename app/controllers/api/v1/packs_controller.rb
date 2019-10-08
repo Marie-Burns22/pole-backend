@@ -1,4 +1,4 @@
-class PacksController < ApiController
+class Api::V1::PacksController < ApiController
   before_action :set_pack, only: [:show, :update, :destroy]
 
   # GET /packs

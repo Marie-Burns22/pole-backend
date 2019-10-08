@@ -1,4 +1,4 @@
-class AwardsController < ApplicationController
+class Api::V1::AwardsController < ApiController
   before_action :set_award, only: [:show, :update, :destroy]
 
   # GET /awards
