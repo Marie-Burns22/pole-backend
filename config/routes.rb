@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
+      resources :students
+      # resources :comments
+      resources :awards
+      resources :articles
       resources :time_slots
       resources :bookings
       resources :courses
