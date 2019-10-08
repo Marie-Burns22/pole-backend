@@ -21,6 +21,8 @@ gem 'puma', '~> 3.11'
 
 gem 'money-rails', '~>1.12'
 
+gem 'fast_jsonapi'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

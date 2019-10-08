@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_05_222515) do
+ActiveRecord::Schema.define(version: 2019_10_08_035611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,22 @@ ActiveRecord::Schema.define(version: 2019_10_05_222515) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "articles", force: :cascade do |t|
+    t.string "published"
+    t.string "title"
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "awards", force: :cascade do |t|
+    t.string "competition"
+    t.integer "year"
+    t.string "award"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "time_slot_id", null: false
@@ -50,6 +66,13 @@ ActiveRecord::Schema.define(version: 2019_10_05_222515) do
     t.index ["course_id"], name: "index_bookings_on_course_id"
     t.index ["time_slot_id"], name: "index_bookings_on_time_slot_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "courses", force: :cascade do |t|
@@ -66,6 +89,14 @@ ActiveRecord::Schema.define(version: 2019_10_05_222515) do
     t.integer "price_cents", default: 0, null: false
     t.string "price_currency", default: "USD", null: false
     t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.integer "credits"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

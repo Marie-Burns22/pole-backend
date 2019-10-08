@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :students
+  resources :comments
+  resources :awards
+  resources :articles
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
   ActiveAdmin.routes(self)
