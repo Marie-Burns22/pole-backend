@@ -24,6 +24,7 @@ default: &default
 development:
   <<: *default
   database: pole_backend_development
+  timeout: 5000
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,5 +82,5 @@ test:
 production:
   <<: *default
   database: pole_backend_production
-  username: pole_backend
-  password: <%= ENV['POLE_BACKEND_DATABASE_PASSWORD'] %>
+  # username: pole_backend
+  # password: <%= ENV['POLE_BACKEND_DATABASE_PASSWORD'] %>
