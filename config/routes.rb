@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :article_comments
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
   ActiveAdmin.routes(self)

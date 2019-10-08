@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_172217) do
+ActiveRecord::Schema.define(version: 2019_10_08_173343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,17 @@ ActiveRecord::Schema.define(version: 2019_10_08_172217) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "article_comments", force: :cascade do |t|
+    t.bigint "student_id", null: false
+    t.string "title"
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "article_id", null: false
+    t.index ["article_id"], name: "index_article_comments_on_article_id"
+    t.index ["student_id"], name: "index_article_comments_on_student_id"
   end
 
   create_table "articles", force: :cascade do |t|
@@ -115,6 +126,8 @@ ActiveRecord::Schema.define(version: 2019_10_08_172217) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "article_comments", "articles"
+  add_foreign_key "article_comments", "students"
   add_foreign_key "bookings", "courses"
   add_foreign_key "bookings", "students"
   add_foreign_key "bookings", "time_slots"
