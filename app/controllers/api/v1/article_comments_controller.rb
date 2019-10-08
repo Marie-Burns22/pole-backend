@@ -1,4 +1,4 @@
-class ArticleCommentsController < ApplicationController
+class Api::V1::ArticleCommentsController < ApiController
   before_action :set_article_comment, only: [:show, :update, :destroy]
 
   # GET /article_comments

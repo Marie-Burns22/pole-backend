@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  resources :article_comments
+  root 'welcome#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
   ActiveAdmin.routes(self)
   
   namespace :api do
     namespace :v1 do
+      resources :article_comments
       resources :students
-      # resources :comments
       resources :awards
       resources :articles
       resources :time_slots
