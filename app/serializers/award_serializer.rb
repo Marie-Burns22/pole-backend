@@ -1,4 +1,4 @@
 class AwardSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :competition, :year, :award
 end

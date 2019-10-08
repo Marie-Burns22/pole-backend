@@ -1,5 +1,5 @@
 ActiveAdmin.register Award do
-
+  permit_params :competition, :year, :award
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

@@ -5,20 +5,20 @@ class Api::V1::AwardsController < ApiController
   def index
     @awards = Award.all
 
-    render json: @awards
+    render json: AwardSerializer.new(@awards)
   end
 
   # GET /awards/1
   def show
-    render json: @award
+    render json: AwardSerializer.new(@award)
   end
 
   # POST /awards
   def create
-    @award = Award.new(award_params)
+    @award = AwardSerializer.new(award_params)
 
     if @award.save
-      render json: @award, status: :created, location: @award
+      render json: AwardSerializer.new(@award), status: :created, location: @award
     else
       render json: @award.errors, status: :unprocessable_entity
     end
