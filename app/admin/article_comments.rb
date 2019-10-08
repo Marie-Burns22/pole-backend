@@ -1,6 +1,6 @@
 ActiveAdmin.register ArticleComment do
   permit_params :student_id, :title, :content, :created_at
-
+  belongs_to :article
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

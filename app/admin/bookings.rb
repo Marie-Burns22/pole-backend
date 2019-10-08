@@ -1,5 +1,7 @@
 ActiveAdmin.register Booking do
-  permit_params :user_id, :time_slot_id, :course_id 
+  permit_params :user_id, :time_slot_id, :course_id
+  belongs_to :student
+  belongs_to :time_slot  
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
