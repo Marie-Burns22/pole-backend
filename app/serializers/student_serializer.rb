@@ -5,5 +5,5 @@ class StudentSerializer
   has_one :user
     has_many :bookings, serializer: BookingSerializer
     has_many :courses, through: :bookings, serializer: CourseSerializer
-    has_many :comments, serializer: CommentSerializer
+    # has_many :comments, serializer: CommentSerializer
 end
