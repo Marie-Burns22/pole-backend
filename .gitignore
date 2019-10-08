@@ -25,3 +25,4 @@
 # Ignore public, as it is built on deploy  #This added per directins in a rock solid modern web stack tutorial
 # Place files for /public in /client/public
 /public
+.env
