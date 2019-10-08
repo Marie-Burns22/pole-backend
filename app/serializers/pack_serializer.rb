@@ -1,4 +1,4 @@
 class PackSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :name, :price_cents, :quantity
 end

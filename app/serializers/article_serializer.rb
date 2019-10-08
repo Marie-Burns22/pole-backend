@@ -1,4 +1,6 @@
 class ArticleSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :published, :title, :content
+
+  has_many :comments, serializer: CommentSerializer
 end
