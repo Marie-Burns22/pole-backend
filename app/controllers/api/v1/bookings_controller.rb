@@ -1,5 +1,7 @@
 class Api::V1::BookingsController < ApiController
   before_action :set_booking, only: [:show, :update, :destroy]
+  before_action :authenticate_user!
+
 
   # GET /bookings
   def index
