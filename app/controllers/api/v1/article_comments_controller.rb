@@ -1,5 +1,7 @@
 class Api::V1::ArticleCommentsController < ApiController
   before_action :set_article_comment, only: [:show, :update, :destroy]
+  before_action :authenticate_user!
+
 
   # GET /article_comments
   def index
