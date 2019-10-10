@@ -46,6 +46,6 @@ class Api::V1::TimeSlotsController < ApiController
 
     # Only allow a trusted parameter "white list" through.
     def time_slot_params
-      params.require(:time_slot).permit(:date, :time, :day, :course_id)
+      params.require(:time_slot).permit(:date, :time, :am_pm, :status)
     end
 end

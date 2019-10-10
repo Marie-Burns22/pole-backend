@@ -1,4 +1,4 @@
 class TimeSlotSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :date, :time, :am_pm, :status 
 end
