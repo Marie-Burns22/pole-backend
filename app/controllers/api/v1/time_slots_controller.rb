@@ -3,7 +3,7 @@ class Api::V1::TimeSlotsController < ApiController
 
   # GET /time_slots
   def index
-    @time_slots = TimeSlot.all
+    @time_slots = TimeSlot.where("status =?", "available")
 
     render json: TimeSlotSerializer.new(@time_slots)
   end
@@ -26,8 +26,11 @@ class Api::V1::TimeSlotsController < ApiController
 
   # PATCH/PUT /time_slots/1
   def update
-    if @time_slot.update(time_slot_params)
-      render json: @time_slot
+    if @time_slot.status == "available"
+      @time_slot.status = "requested"
+      @time_slot.save
+      @time_slots = TimeSlot.where("status =?", "available")
+     render json: TimeSlotSerializer.new(@time_slots)
     else
       render json: @time_slot.errors, status: :unprocessable_entity
     end
