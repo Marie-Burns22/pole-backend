@@ -1,5 +1,5 @@
 class Api::V1::TimeSlotsController < ApiController
-  # before_action :set_time_slot, only: [:show, :update, :destroy]
+  before_action :set_time_slot, only: [:show, :update, :destroy]
 
   # GET /time_slots
   def index
@@ -26,14 +26,13 @@ class Api::V1::TimeSlotsController < ApiController
 
   # PATCH/PUT /time_slots/1
   def update
-    if @time_slot.status == "available"
-      @time_slot.status = "requested"
-      @time_slot.save
-      @time_slots = TimeSlot.where("status =?", "available")
-     render json: TimeSlotSerializer.new(@time_slots)
-    else
-      render json: @time_slot.errors, status: :unprocessable_entity
-    end
+      @time_slot.status = "requested" 
+      if @time_slot.save
+        @time_slots = TimeSlot.where("status =?", "available")
+        render json: TimeSlotSerializer.new(@time_slots)
+      else
+        render json: @time_slot.errors, status: :unprocessable_entity
+      end
   end
 
   # DELETE /time_slots/1
