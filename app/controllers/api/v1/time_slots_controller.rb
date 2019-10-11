@@ -5,12 +5,12 @@ class Api::V1::TimeSlotsController < ApiController
   def index
     @time_slots = TimeSlot.all
 
-    render json: @time_slots
+    render json: TimeSlotSerializer.new(@time_slots)
   end
 
   # GET /time_slots/1
   def show
-    render json: @time_slot
+    render json: TimeSlotSerializer.new(@time_slot)
   end
 
   # POST /time_slots
