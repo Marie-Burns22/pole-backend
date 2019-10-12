@@ -5,7 +5,7 @@ class Api::V1::CoursesController < ApiController
   def index
     @courses = Course.all
 
-    render json: @courses
+    render json: CourseSerializer.new(@courses)
   end
 
   # GET /courses/1
