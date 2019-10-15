@@ -1,6 +1,6 @@
 class CourseSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :size, :location, :description
+  attributes :name, :size, :location, :description, :img
 
   # has_many :time_slots, serializer: TimeSlotSerializer
   # has_many :bookings, through: :time_slots, serializer: BookingSerializer

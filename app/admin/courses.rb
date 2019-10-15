@@ -1,5 +1,6 @@
 ActiveAdmin.register Course do
-  permit_params :name, :size, :location, :description
+  permit_params :name, :size, :location, :description, :img
+  menu label: "Services"
   
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
