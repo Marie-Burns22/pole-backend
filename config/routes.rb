@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :testimonials
   root 'welcome#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
@@ -7,6 +6,7 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
+      resources :testimonials
       resources :article_comments
       resources :students
       resources :awards

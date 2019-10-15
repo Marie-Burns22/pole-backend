@@ -17,4 +17,5 @@
 6. Namespace controller and inherit from apicontroller. Example: `class Api::V1::TestimonialsController < ApiController`
 7. Add active admin resource: Example: `rails generate active_admin:resource Testimonial`
 8. Uncomment or add Add permit_params to active admin model. Example: `permit_params :author, :content`
-9. Heroku push, migrate and restart `git push heroku master && heroku run rake db:migrate && heroku restart`
+9. Namespace routes in routes.rb
+10. Heroku push, migrate and restart `git push heroku master && heroku run rake db:migrate && heroku restart`
