@@ -10,7 +10,7 @@ class Api::V1::CoursesController < ApiController
 
   # GET /courses/1
   def show
-    render json: @course
+    render json: CourseSerializer.new(@course)
   end
 
   # POST /courses

@@ -46,6 +46,6 @@ class Api::V1::ArticlesController < ApiController
 
     # Only allow a trusted parameter "white list" through.
     def article_params
-      params.require(:article).permit(:published, :title, :content)
+      params.require(:article).permit(:published, :title, :content, :img)
     end
 end
