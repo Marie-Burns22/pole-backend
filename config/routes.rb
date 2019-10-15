@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :testimonials
   root 'welcome#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
