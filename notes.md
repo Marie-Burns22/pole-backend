@@ -11,7 +11,7 @@
 ## Add new model to active admin
 1. Add table to active record with migration. Example `rails g scaffold Testimonial author:string content:string`
 2. `rake db:migrate`
-3. Create serializer: `rails g serializer author content`
+3. Create serializer: Example `rails g serializer Testimonial author content`
 4. Call serializer in controllers: Example `render json: TestimonialSerializer.new(@testimonials)`
 5. Move controller to namespaced directory /api/v1
 6. Namespace controller and inherit from apicontroller. Example: `class Api::V1::TestimonialsController < ApiController`
