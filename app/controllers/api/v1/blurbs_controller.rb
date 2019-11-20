@@ -13,31 +13,6 @@ class Api::V1::BlurbsController < ApiController
     render json: BlurbSerializer.new(@blurb)
   end
 
-  # POST /blurbs
-  # def create
-  #   @blurb = Blurb.new(blurb_params)
-
-  #   if @blurb.save
-  #     render json: @blurb, status: :created, location: @blurb
-  #   else
-  #     render json: @blurb.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-  # PATCH/PUT /blurbs/1
-  # def update
-  #   if @blurb.update(blurb_params)
-  #     render json: @blurb
-  #   else
-  #     render json: @blurb.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-  # # DELETE /blurbs/1
-  # def destroy
-  #   @blurb.destroy
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blurb
