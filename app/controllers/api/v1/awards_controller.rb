@@ -13,31 +13,6 @@ class Api::V1::AwardsController < ApiController
     render json: AwardSerializer.new(@award)
   end
 
-  # POST /awards
-  # def create
-  #   @award = AwardSerializer.new(award_params)
-
-  #   if @award.save
-  #     render json: AwardSerializer.new(@award), status: :created, location: @award
-  #   else
-  #     render json: @award.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-  # PATCH/PUT /awards/1
-  # def update
-  #   if @award.update(award_params)
-  #     render json: @award
-  #   else
-  #     render json: @award.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-  # DELETE /awards/1
-  # def destroy
-  #   @award.destroy
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_award
