@@ -3,7 +3,6 @@
 This website was designed for a small business owner who offers classes and workshops. In addition to promoting her personal brand and services, it is also the interface for bookings and payments.
 
 
-
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -29,21 +28,14 @@ This website was designed for a small business owner who offers classes and work
 ## Setup
 For development run on localhost:3000
 
-
 ## Features
 * ActiveAdmin for admin dashboard: Business owner can create, edit, and delete services, awards, news, informational text, and time-slots for bookings.
-* Time-slot availability is updated by React frontend booking form submissions to prevent multiple requests for the same time-slot.
-
-## To-do list:
-* Research and choose booking and payment service to prepare for business growth.
-* Change domain name to custom name.  Need to transfer from Weebly website that is currently using the custom domain name.
 
 ## Status
-* Both frontend and backend are fully functional and deployed. 
-* Ready for owner to edit information and begin using.
+* Currently not deployed. 
 
 ## Inspiration
 This project was inspired by Ms. Vegas who follows her dreams.
 
 ## Contact
-This project was created by Marie C. Burns. Please email me with any questions or great ideas: mariecburns@gmail.com
+This project was created by Marie C. Burns. Please email me with any questions or great ideas: mcburns2222@pm.me
